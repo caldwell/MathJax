@@ -3,11 +3,12 @@
 $PluginInfo['MathJax'] = array(
    'Name' => 'LaTeX Math',
    'Description' => 'Integrates MathJax allowing users to use LaTeX math notation in comments using the [math] tag.',
-   'Version' => '1.2',
-   'Author' => 'Peregrine'
+   'Version' => '1.3',
+   'Author' => 'Peregrine',
+   'License' => 'GNU GPL2'
 );
 
-class LoadMathJax extends Gdn_Plugin {
+class MathJaxPlugin extends Gdn_Plugin {
 
     public function DiscussionController_Render_Before($Sender) {
         $this->Add_Resource($Sender);
@@ -26,10 +27,7 @@ class LoadMathJax extends Gdn_Plugin {
             <script>
             MathJax.Hub.Config({
                 tex2jax: {
-                    // inlineMath: [$'\(','\)'$],
-                                          inlineMath: [ ['[math]','[/math]'], ['\\(','\\)'] ]
-                                        //   inlineMath: [ ['$$','$$'], ['\\(','\\)'] ]
-
+                    inlineMath: [ ['[math]','[/math]'], ['\\(','\\)'] ]
                 }
             });
         </script>
