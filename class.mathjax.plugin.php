@@ -27,7 +27,7 @@ class MathJaxPlugin extends Gdn_Plugin {
             <script>
             MathJax.Hub.Config({
                 tex2jax: {
-                    inlineMath: [ ['[math]','[/math]'], ['\\(','\\)'] ]
+                    inlineMath: [ ['[math]','[/math]'], ['\\\\(','\\\\)'] ]
                 }
             });
         </script>
